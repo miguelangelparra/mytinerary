@@ -1,19 +1,13 @@
 import React from 'react'
 import homeIcon from '../assets/img/homeIcon.png'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-
-
-class Footer extends React.Component{
-  render(){
-    return(
+const Footer = () => {
+    return (
       <footer className="alinearvertical text-center">
-    <Link to="/"><img id="homeIcon" src={homeIcon} alt="Home Icon" /></Link>
-</footer>
-
-
+        <Link to="/"><img id="homeIcon" src={homeIcon} alt="Home Icon" /></Link>
+      </footer>
     )
   }
-}
 
 export default Footer

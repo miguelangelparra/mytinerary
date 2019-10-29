@@ -20,7 +20,7 @@
 }
 #logo{
   max-width: 100%;
-  max-height: 30vh;
+  max-height: 15vh;
 }
 
 #homeIcon{
@@ -29,4 +29,9 @@
 
 #divAccount{
   height: 10vh;
+}
+
+#browsingIcon{
+  max-width: 100%;
+  max-height: 15vh;
 }
