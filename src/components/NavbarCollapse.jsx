@@ -5,7 +5,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Button from 'react-bootstrap/Button'
 import Account from './Account'
 import Popover from 'react-bootstrap/Popover'
-import img from '../assets/img/homeIcon.png'
+import img from '../assets/img/profileIcon.png'
 
 
 
@@ -25,20 +25,19 @@ const NavbarCollapse = () => {
           </Popover>
         }
       >
-        <Button variant="secondary"><img
+        <Button variant="white"><img
           src={img}
           width="30"
           height="30"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top bg-white"
           alt="React Bootstrap logo"
-          roundedCircle
         /></Button>
       </OverlayTrigger>
       
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="#link">Link</Nav.Link>
         </Nav>
       </Navbar.Collapse>

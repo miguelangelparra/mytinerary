@@ -37,24 +37,9 @@ class Login extends React.Component {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
-      /*  <div>
-          <h1>Login</h1>
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email address</label>
-              <input type="email" className="form-control" id="email" onChange={this.handleChange} aria-describedby="emailHelp" placeholder="Enter email"></input>
-              <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" className="form-control" id="password" onChange={this.handleOnChange} placeholder="Password"></input>
-            </div>
-            <button type="submit" className="btn btn-primary" >Login</button>
-          </form>
-        </div>*/
     )
   }
 }

@@ -1,0 +1,14 @@
+ const cities = [
+    { title: "New York", "src": "../assets/img/newyork.jpg" }, 
+    { title: "Barcelona", "src": "../assets/img/cities/barcelona.jpg" }, 
+    { title: "Caracas", "src": "../assets/img/caracas.jpg" }, 
+    { title: "Bogota", "src": "../assets/img/bogota.jpg" },
+    { title: "Sao Paulo", "src": "../assets/img/saopaulo.jpg" }, 
+    { title: "Cartagena", "src": "../assets/img/cartagena.jpg" }, 
+    { title: "Santiago", "src": "../assets/img/santiago.jpg" }, 
+    { title: "Panama", "src": "../assets/img/panama.jpg" },
+    { title: "Bariloche", "src": "../assets/img/bariloche.jpg" },
+    { title: "Miami", "src": "../assets/img/miami.jpg" }, 
+    { title: "Londres", "src": "../assets/img/londres.jpg" }, 
+    { title: "Berlin", "src": "../assets/img/berlin.jpg" }
+  ]

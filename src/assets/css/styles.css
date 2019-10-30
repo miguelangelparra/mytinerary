@@ -1,11 +1,14 @@
 
+p{
+  padding: 0;
+  margin: 0;
+}
 #browsingIcon{
   width: 20vh;
 }
 #app{
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
   text-align: center;
 }
 
@@ -20,11 +23,11 @@
 }
 #logo{
   max-width: 100%;
-  max-height: 15vh;
+  max-height: 14vh;
 }
 
 #homeIcon{
-  max-width: 15vh;
+  max-width: 14vh;
 }
 
 #divAccount{
@@ -32,6 +35,16 @@
 }
 
 #browsingIcon{
-  max-width: 100%;
-  max-height: 15vh;
+  max-width: 10vh;
+  max-height: 10vh;
 }
+
+.card-img-top{
+  max-width: 40vh;
+  height: 13vh;
+}
+
+.img-cities{
+  padding: 0.25rem;
+}
+
