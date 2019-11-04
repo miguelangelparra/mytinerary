@@ -8,6 +8,9 @@ import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
 import NavbarCollapse from './components/NavbarCollapse'
 
+import{Provider} from 'react-redux'
+import store from './store'
+
 
 //import Home from './components/Home'
 // <Route exact path='/' component={Home} />
@@ -21,6 +24,7 @@ import NavbarCollapse from './components/NavbarCollapse'
 class App extends React.Component {
   render() {
     return (
+      <Provider store={store}>
       <div id="app" className="containeralign-items-center flex-column">
 
       <NavbarCollapse/>
@@ -34,7 +38,7 @@ class App extends React.Component {
 
       </BrowserRouter>
       </div>
-
+      </Provider>
     )
   }
 }

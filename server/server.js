@@ -1,26 +1,30 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser= require('body-parser')
+const cities = require('./routes/api/cities')
+
 
 
 const app = express()
 var router = express.Router();
 
- 
+//Body Parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+//Routes 
+app.use('/api/cities',cities);
+
 router.get('/', function (req, res) {
   res.send('Hello World')
 })
 
 router.get('/test', function(req, res) {
-  res.send('Yo soy la pagina de TEst') })
+  res.send('Yo soy la pagina de TEst') 
+})
  
-
-app.use(router);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
-const db= require('./config/keys').mongoURI;
-
+//Connect to Mongo
+const db= require('./database/config/keys').mongoURI;
 mongoose
 .connect(db)
 .then(() => console.log("MongoDB connected.."))

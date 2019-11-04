@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "dev":"concurrently \"npm run server\" \"cd ../client/ && npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
