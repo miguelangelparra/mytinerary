@@ -1,5 +1,4 @@
-import {GET_CITIES} from '../actions/types'
-import { from } from "zen-observable"
+import {GET_CITIES, SET_CITIES} from '../actions/types'
 
 const initialState={
   cities : []
@@ -11,6 +10,9 @@ switch(action.type){
     return{
       ...state
     }
+    case SET_CITIES:
+      return {
+        ...state}
     default:
       return state;
 
