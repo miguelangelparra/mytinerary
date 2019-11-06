@@ -2,10 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser= require('body-parser')
 const cities = require('./routes/api/cities')
+const cors= require('cors')
 
 
 
 const app = express()
+app.use(cors())
 var router = express.Router();
 
 //Body Parser

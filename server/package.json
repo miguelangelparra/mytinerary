@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "dev":"concurrently \"npm run server\" \"cd ../client/ && npm run start\"",
+    "dev": "concurrently \"npm run server\" \"cd ../client/ && npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
     "mongoose": "^5.7.7"

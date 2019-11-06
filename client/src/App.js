@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import "./assets/css/styles.css"
 import Home2 from './components/Home2'
@@ -8,8 +8,7 @@ import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
 import NavbarCollapse from './components/NavbarCollapse'
 
-import{Provider} from 'react-redux'
-import store from './store'
+
 
 
 //import Home from './components/Home'
@@ -24,21 +23,19 @@ import store from './store'
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
       <div id="app" className="containeralign-items-center flex-column">
 
-      <NavbarCollapse/>
+        <NavbarCollapse />
 
-      <BrowserRouter>
-         
-        <Route exact path='/' component={Home2} />
-        <Route path='/cities' component={Cities} />
-        <Route path='/login' component={Login} />
-        <Route path='/createAccount' component={CreateAccount} />
+        <BrowserRouter>
 
-      </BrowserRouter>
+          <Route exact path='/' component={Home2} />
+          <Route path='/cities' component={Cities} />
+          <Route path='/login' component={Login} />
+          <Route path='/createAccount' component={CreateAccount} />
+
+        </BrowserRouter>
       </div>
-      </Provider>
     )
   }
 }

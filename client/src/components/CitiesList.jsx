@@ -4,38 +4,41 @@ import { getCities } from '../actions/citiesActions'
 import propTypes from 'prop-types'
 
 class CitiesList extends React.Component {
+constructor(props){
+super(props)
 
-  /* const citiesList =  Cities.map((city)=>{return (
-     <div>
-     {city.id},
-    {city.name} ,
-     {city.country}
-     </div>)})
-     
-     {citiesList}
-*/
-  /*fetchCities = () => {
-    this.setState({...this.state, isFetching: true})
-    fetch('http://localhost:5000/api/cities')
-     .then(response => console.log(response))
-      .then(result => this.setState({cities: result, 
-                                     isFetching: false}))
-      .catch(e => console.log(e));
-  }*/
+this.state={
+  cities:[]
+}
+}
+  
 
-
-  componentDidMount() {
-    this.props.getCities()
+  async componentDidMount() {
+   await this.props.getCities()
+    this.setState({cities:this.props.cities})
+    console.log(this.state.cities)
   }
+
+  filterCities =  () => {
+
+  }
+
 
   render() {
     const { cities } = this.props.cities
+    const citiesList = cities.map((city) => {
+      return (
+        <div key={city._id}> {city.name}, {city.country}  </div>
+
+      )})
+    
+
     return (
       <div>
-        {cities}
-      </div>
+        {citiesList}
+    </div>
     )
-  }
+    }
 }
 CitiesList.propTypes = {
   getCities: propTypes.func.isRequired,
