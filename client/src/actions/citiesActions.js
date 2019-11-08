@@ -1,4 +1,4 @@
-import {GET_CITIES, SET_CITIES} from './types';
+import {GET_CITIES, FILTER_CITIES} from './types';
 
 export const getCities = () => async (dispatch) => {
 
@@ -16,9 +16,17 @@ export const getCities = () => async (dispatch) => {
 
 }
 
-export const setCities = () => {
-  
-  return {
-    types: SET_CITIES
-  }
+export const filterCities = (searchCity, cities) =>  {
+
+  let filteredCities = cities
+  filteredCities = filteredCities.filter((city) => {
+    let cityName = city.name.toLowerCase()
+    return cityName.includes(
+      searchCity.toLowerCase()) 
+  })
+  return ({
+    type: FILTER_CITIES,
+    payload: filteredCities
+  })
 }
+
