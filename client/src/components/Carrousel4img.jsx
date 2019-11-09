@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-
 import NewYork from "../assets/img/cities/newyork.jpg"
 import Barcelona from "../assets/img/cities/barcelona.jpg"
 import Caracas from "../assets/img/cities/caracas.jpg"
@@ -14,7 +13,7 @@ import Santiago from "../assets/img/cities/santiago.jpg"
 import Panama from "../assets/img/cities/panama.jpg"
 import Bariloche from "../assets/img/cities/bariloche.jpg"
 import Miami from "../assets/img/cities/miami.jpg"
-import Londres from "../assets/img/cities/londres.jpg"
+import Londres from "../assets/img/cities/london.jpg"
 import Berlin from "../assets/img/cities/berlin.jpg"
 
 const Carrousel4img = () => {
@@ -27,7 +26,7 @@ const Carrousel4img = () => {
           <Row>
             <Col>
               <Card >
-                <Card.Img variant="top" src={NewYork} />
+                <Card.Img variant="top" src={require("../assets/img/cities/newyork.jpg")} />
                 <div className="img-cities">
                   <Card.Title >New York</Card.Title>
                 </div >
