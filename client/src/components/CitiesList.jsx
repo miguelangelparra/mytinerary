@@ -18,7 +18,6 @@ class CitiesList extends React.Component {
   async componentDidMount() {
     await this.props.getCities()
     this.setState({ cities: this.props.cities.cities, citiesFiltered: this.props.cities.cities })
-    console.log(this.state.cities)
   }
 
   handleChange = (e) => {
@@ -34,19 +33,17 @@ class CitiesList extends React.Component {
     })
 
     this.setState({ ...this.state, citiesFiltered: filteredcities })
-    console.log(this.state.citiesFiltered)
 
   }
-//Imagenes[city.name]
   render() {
     const { cities } = this.props.cities
     const { citiesFiltered } = this.props.citiesFiltered
     const citiesList = this.state.citiesFiltered.map((city) => {
       return (
-        <div key={city._id} >
-                    { <img src={require(`../assets/img/cities/${city.name.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
-                    {/* { <img src={require(Imagenes[city.name])} alt=""/> } */}
-           {city.name}, {city.country}  </div>
+        <div key={city._id} className="img-div">
+                    { <img className="img-filter" src={require(`../assets/img/cities/${city.name.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
+           <p className="img-title">{city.name}, {city.country} </p> 
+           </div>
       )
     })
     return (

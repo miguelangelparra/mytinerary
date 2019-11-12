@@ -44,7 +44,19 @@ p{
   height: 13vh;
 }
 
+.img-filter{
+  width: 40vh;
+  height: 20vh;
+}
+
 .img-cities{
   padding: 0.25rem;
 }
 
+.img-div{
+}
+
+.img-title{
+  position:relative;
+  text-align: center;
+}
