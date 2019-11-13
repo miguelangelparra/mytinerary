@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { getCities } from '../actions/citiesActions'
 import { filterCities } from '../actions/citiesActions'
+import { Link } from 'react-router-dom'
 
 import propTypes from 'prop-types'
 
@@ -41,8 +42,9 @@ class CitiesList extends React.Component {
     const citiesList = this.state.citiesFiltered.map((city) => {
       return (
         <div key={city._id} className="img-div">
+          <Link to={'/' + city.name }>
                     { <img className="img-filter" src={require(`../assets/img/cities/${city.name.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
-           <p className="img-title">{city.name}, {city.country} </p> 
+           <p className="img-title">{city.name}, {city.country} </p> </Link>
            </div>
       )
     })

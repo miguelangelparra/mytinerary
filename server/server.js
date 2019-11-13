@@ -1,7 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser= require('body-parser')
+
 const cities = require('./routes/api/cities')
+const itinerary = require('./routes/api/itinerary')
+
 const cors= require('cors')
 
 
@@ -16,6 +19,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Routes 
 app.use('/api/cities',cities);
+app.use('/api/itinerary',itinerary);
+
 
 router.get('/', function (req, res) {
   res.send('Hello World')
