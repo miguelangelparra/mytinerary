@@ -5,6 +5,7 @@ import "./assets/css/styles.css"
 import Home2 from './components/Home2'
 import Cities from './components/Cities'
 import Login from './components/Login'
+import Itinerary from './components/Itinerary'
 import CreateAccount from './components/CreateAccount';
 import NavbarCollapse from './components/NavbarCollapse'
 
@@ -33,6 +34,7 @@ class App extends React.Component {
           <Route path='/cities' component={Cities} />
           <Route path='/login' component={Login} />
           <Route path='/createAccount' component={CreateAccount} />
+          <Route path='/itinerary/:city' component={Itinerary} />
 
         </BrowserRouter>
       </div>

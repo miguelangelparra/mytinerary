@@ -42,7 +42,7 @@ class CitiesList extends React.Component {
     const citiesList = this.state.citiesFiltered.map((city) => {
       return (
         <div key={city._id} className="img-div">
-          <Link to={'/' + city.name }>
+          <Link to={'/itinerary/' + city.name }>
                     { <img className="img-filter" src={require(`../assets/img/cities/${city.name.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
            <p className="img-title">{city.name}, {city.country} </p> </Link>
            </div>
