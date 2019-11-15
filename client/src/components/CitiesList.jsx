@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { getCities } from '../actions/citiesActions'
-import { filterCities } from '../actions/citiesActions'
+import { getCities } from '../redux/actions/citiesActions'
+import { filterCities } from '../redux/actions/citiesActions'
 import { Link } from 'react-router-dom'
 
 import propTypes from 'prop-types'

@@ -1,5 +1,6 @@
 let mongoose = require('mongoose')
 
+
 let Cities = new mongoose.Schema({
   name: {
     type: String,
