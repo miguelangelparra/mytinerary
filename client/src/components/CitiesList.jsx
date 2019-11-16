@@ -42,8 +42,8 @@ class CitiesList extends React.Component {
     const citiesList = this.state.citiesFiltered.map((city) => {
       return (
         <div key={city._id} className="img-div">
-          <Link to={'/itinerary/' + city.name }>
-                    { <img className="img-filter" src={require(`../assets/img/cities/${city.name.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
+          <Link  cityname={city.name} to={'/itinerary/' + city._id }>
+                    { <img className="img-filter" src={require(`../assets/img/cities/${city.imagen.toLowerCase().split(" ").join("")}.jpg`)} alt=""/> }
            <p className="img-title">{city.name}, {city.country} </p> </Link>
            </div>
       )

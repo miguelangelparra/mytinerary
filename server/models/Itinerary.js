@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+//const Cities = require('./Cities')
 
 
 
 let Itinerary = new mongoose.Schema({
-  city: { type: Schema.Types.ObjectId  },
+  city: { type: Schema.Types.ObjectId  ,
+  ref:"Cities"},
   title: {
     type: String,
   },

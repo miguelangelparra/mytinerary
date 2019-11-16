@@ -8,6 +8,9 @@ let Cities = new mongoose.Schema({
   },
   country: {
     type: String
+  },
+  imagen:{
+    type: String
   }
 },
 )
