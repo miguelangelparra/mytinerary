@@ -1,5 +1,4 @@
-let mongoose = require('mongoose')
-
+const mongoose = require('mongoose')
 
 let Cities = new mongoose.Schema({
   name: {

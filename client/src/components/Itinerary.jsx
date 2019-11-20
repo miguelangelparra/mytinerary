@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
 import { connect } from 'react-redux'
 import { getItinerary } from '../redux/actions/itineraryActions'
+import { UncontrolledCollapse, Button, CardBody, Card, Container} from 'reactstrap';
+
 
 import propTypes from 'prop-types'
 
@@ -15,26 +17,19 @@ class Itinerary extends React.Component {
   }
 
   async componentDidMount() {
-    console.log(this.props.match.params.city)
-    console.log(this.props)
-
     await this.props.getItinerary(this.props.match.params.city)
     this.setState({ itinerary: this.props.itinerary.itinerary })
     this.setState({ cities: this.props.cities.cities })
-    console.log(this.props)
   }
 
-  handleClick = (e) => {
-
-    console.log(e)
+  handleToggle = (e) => {
     console.log(e.target.value)
+
+
   }
   render() {
-    console.log(this.props.match.params.city)
-
     const cityHeader = this.props.cities.cities.filter(city => city._id == this.props.match.params.city)[0]
-    console.log(cityHeader)
-    const itinerariesList = this.state.itinerary.map((itinerary) => {
+    const itinerariesList = this.state.itinerary.map((itinerary, index) => {
       return (
         <div key={itinerary._id}>
           <div className="row">
@@ -72,7 +67,11 @@ class Itinerary extends React.Component {
 
           <div className="row">
             <div className="col-12">
-              <button className="col-12 btn btn-large bg-primary" value={itinerary._id} onClick={this.handleClick}>View all</button>
+              <Button className="col-12 btn btn-large bg-primary" id={"Collapse"+ itinerary._id} onClick={this.handleToggle}>View all</Button>
+              <UncontrolledCollapse toggler={"Collapse"+itinerary._id}>
+              {itinerary.activities.map((act) => { return (<div key={act} >{act}</div>) })}
+
+              </UncontrolledCollapse>
             </div>
           </div>
         </div>
@@ -86,7 +85,7 @@ class Itinerary extends React.Component {
     //const cityItinerary = () => {return (<div style={{backgroundImage:"url("+{props.match.params.city}+")"}}></div>)}
 
     return (
-      <div>
+      <Container fluid>
         <NavbarCollapse></NavbarCollapse>
         <div className="">
           {<img className="img-filter" src={require(`../assets/img/cities/${cityHeader.imagen.toLowerCase().split(" ").join("")}.jpg`)} alt="" />}
@@ -95,7 +94,7 @@ class Itinerary extends React.Component {
         <h4>Available MYtineraries</h4>
 
         {itinerariesList}
-      </div >
+      </Container>
     )
   }
 }

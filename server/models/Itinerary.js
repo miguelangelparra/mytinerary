@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-//const Cities = require('./Cities')
-
-
 
 let Itinerary = new mongoose.Schema({
-  city: { type: Schema.Types.ObjectId  ,
-  ref:"Cities"},
+  city: {
+    type: Schema.Types.ObjectId,
+    ref: "Cities"
+  },
   title: {
     type: String,
   },
@@ -24,7 +23,8 @@ let Itinerary = new mongoose.Schema({
   },
   hashtag: {
     type: Array,
-  }
+  },
+  activities: [{ type: Schema.Types.ObjectId, ref: 'Activities' }]
 
 },
 )
