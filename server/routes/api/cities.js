@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //Cities Model
-const Cities  = require ('../../models/Cities');
+const Cities  = require ('../../models/CitiesSchema');
 
 // @route GET api/cities
 // @desc  Get all items
