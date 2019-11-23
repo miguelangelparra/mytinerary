@@ -17,6 +17,9 @@ var router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+//Sirve una carpeta de archivos estaticos de forma publica
+app.use(express.static('public'));
+
 //Routes 
 app.use('/api/cities',cities);
 app.use('/api/itinerary',itinerary);

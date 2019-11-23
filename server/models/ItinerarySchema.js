@@ -27,4 +27,4 @@ let ItinerarySchema = new mongoose.Schema({
   activities: [{ type: Schema.Types.ObjectId, ref: 'Activities' }]
 },
 )
-module.exports = ItinerarySchema = mongoose.model('Itinerary', ItinerarySchema, 'itinerary')
+module.exports = ItinerarySchema = mongoose.model('Itineraries', ItinerarySchema, 'itineraries')

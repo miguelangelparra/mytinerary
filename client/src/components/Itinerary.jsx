@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import { getItinerary } from '../redux/actions/itineraryActions'
 import { UncontrolledCollapse, Button, Container } from 'reactstrap';
 import propTypes from 'prop-types'
+import Activities from '../reserved/Activities'
+import CarouselActivities from './CarouselActivities'
+
 
 class Itinerary extends React.Component {
   constructor(props) {
@@ -56,13 +59,13 @@ const ItinerariesList = (props) => {
     <div key={itinerary._id}>
       <div className="row">
         <div className="col-4">
-          <img src={itinerary.profilePic} alt={itinerary.title} style={{ width: "100%", height: "20vh" }} />
+          <img className="rounded-circle" src={'http://localhost:5000/img/'+ itinerary.profile_pic} alt={itinerary.title} style={{ width: "100%", height: "20vh" }} />
         </div>
 
         <div className="col-8">
           <div className="row">
             <div className="col-12"></div>
-            <h2>{itinerary.title}</h2>
+            <h3>{itinerary.title}</h3>
           </div>
 
           <div className="row">
@@ -90,20 +93,17 @@ const ItinerariesList = (props) => {
         <div className="col-12">
           <Button className="col-12 btn btn-large bg-primary" id={"Collapse" + itinerary._id} onClick={handleToggle}>View all</Button>
           <UncontrolledCollapse toggler={"Collapse" + itinerary._id}>
-            {/* {itinerary.activities.map((act) => { return (<div key={act._id} >{act.title}</div>) })} */}
             <ActivitiesToggler activities={itinerary.activities}></ActivitiesToggler>
           </UncontrolledCollapse>
         </div>
       </div>
     </div>
-
   )
 }
-
 const ActivitiesToggler = (props) => {
   return (
     <div>
-    {props.activities.map((activity) => { return (<div key={activity._id}>{activity.title} <img src={activity.image}></img></div>) })}
+   <CarouselActivities activities={props.activities}></CarouselActivities>
     </div>
   )
 }
