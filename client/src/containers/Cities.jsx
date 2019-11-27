@@ -1,5 +1,5 @@
 import React from 'react';
-import CitiesList from './CitiesList';
+import CitiesList from '../components/CitiesList';
 
 class Cities extends React.Component{
   

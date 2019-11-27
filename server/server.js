@@ -4,6 +4,8 @@ const bodyParser= require('body-parser')
 
 const cities = require('./routes/api/cities')
 const itinerary = require('./routes/api/itinerary')
+const users = require('./routes/api/users')
+
 
 const cors= require('cors')
 
@@ -23,6 +25,7 @@ app.use(express.static('public'));
 //Routes 
 app.use('/api/cities',cities);
 app.use('/api/itinerary',itinerary);
+app.use('/api/users',users)
 
 
 router.get('/', function (req, res) {

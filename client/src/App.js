@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import "./assets/css/styles.css"
-import Home2 from './components/Home2'
-import Cities from './components/Cities'
+import Home2 from './containers/Home2'
+import Cities from './containers/Cities'
 import Login from './components/Login'
-import Itinerary from './components/Itinerary'
+import Itinerary from './containers/Itinerary'
 import CreateAccount from './components/CreateAccount';
 import NavbarCollapse from './components/NavbarCollapse'
 

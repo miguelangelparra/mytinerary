@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'
-import Browsing from './Browsing'
-import Account from './Account';
+import Header from '../components/Header'
+import Browsing from '../components/Browsing'
+import Account from '../components/Account';
 
 class Home extends React.Component {
   render() {

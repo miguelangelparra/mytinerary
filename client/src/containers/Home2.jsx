@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header'
-import Browsing from './Browsing'
-import Account from './Account';
-import Carrousel4Img from './Carrousel4img'
+import Header from '../components/Header'
+import Browsing from '../components/Browsing'
+import Account from '../components/Account';
+import Carrousel4Img from '../components/Carrousel4img'
 
 
 class Home2 extends React.Component {

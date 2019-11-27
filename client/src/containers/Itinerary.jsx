@@ -5,7 +5,7 @@ import { getItinerary } from '../redux/actions/itineraryActions'
 import { UncontrolledCollapse, Button, Container } from 'reactstrap';
 import propTypes from 'prop-types'
 import Activities from '../reserved/Activities'
-import CarouselActivities from './CarouselActivities'
+import CarouselActivities from '../components/CarouselActivities'
 
 
 class Itinerary extends React.Component {
@@ -42,7 +42,7 @@ class Itinerary extends React.Component {
 
         <h4>Available MYtineraries</h4>
         {this.state.itinerary.map((itinerary) => {
-          return (<ItinerariesList itinerary={itinerary}></ItinerariesList>)
+          return (<ItinerariesList key={itinerary._id} itinerary={itinerary}></ItinerariesList>)
         })}
 
       </Container>

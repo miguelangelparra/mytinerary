@@ -28,7 +28,7 @@ const CarouselActivities = (props) => {
             draggable={false}
             showDots={false}
             responsive={responsive}
-           // ssr={true} // means to render carousel on server-side.
+            // ssr={true} // means to render carousel on server-side.
             infinite={true}
             autoPlay={props.deviceType !== "mobile" ? true : false}
             autoPlaySpeed={3000}
@@ -40,12 +40,12 @@ const CarouselActivities = (props) => {
             deviceType={props.deviceType}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            centerMode = { true }        >
+            centerMode={true}        >
             {activities.map((activity) => {
                 return (
-                    <div >
-                    <img src={activity.image} style={{width : "13em", height : "10em"}} ></img>
-                <h5 > {activity.title}</h5>
+                    <div key={activity._id} >
+                        <img src={activity.image} style={{ width: "13em", height: "10em" }} ></img>
+                        <h5 > {activity.title}</h5>
                     </div>
                 )
             })}
