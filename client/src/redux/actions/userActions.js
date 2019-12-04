@@ -1,4 +1,4 @@
-import { GET_USER, POST_USER } from './types';
+import { GET_USER} from './types';
 
 export const getUsers = () => async (dispatch) => {
 
@@ -12,19 +12,4 @@ export const getUsers = () => async (dispatch) => {
     .catch(e => console.log(e));
 }
 
-export const postUser = (newUser) => {
 
-  var url = 'http://localhost:5000/api/users';
-  var data = newUser
-
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
-
-}

@@ -9,5 +9,5 @@ export default combineReducers({
   cities:citiesReducer,
   citiesFiltered: citiesReducer,
   itinerary: itineraryReducer,
-  users: userReducer
+  user: userReducer
 })

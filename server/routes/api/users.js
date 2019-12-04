@@ -10,15 +10,16 @@ router.get('/', function (req, res) {
 
 router.post('/', (req, res) => {
   const newUser = new User({
-      email: req.body.email,
-      password: req.body.password,
-      pic:req.body.pic
+    pic: req.body.pic,
+    email: req.body.email,
+    password: req.body.password
   })
   newUser.save()
     .then(user => {
-    res.send(user)
+      res.send(user)
     })
     .catch(err => {
-    res.status(500).send("Server error")}) 
+      res.status(500).send("Server error")
+    })
 });
 module.exports = router

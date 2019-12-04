@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let UserSchema= new mongoose.Schema({
+let UserSchema= new Schema({
   email:{
     type: String
   },
@@ -9,7 +9,7 @@ let UserSchema= new mongoose.Schema({
     type:String
   },
   pic:{
-    pic:String
+    type:String
   }
 })
 

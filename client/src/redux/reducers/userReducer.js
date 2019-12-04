@@ -13,9 +13,13 @@ export default function(state=initialState,action){
         user:action.payload
       }
       case POST_USER:
+
+      
       return{
         ...state,
         user:action.payload
       }
+      default:
+        return state;
   }
 }

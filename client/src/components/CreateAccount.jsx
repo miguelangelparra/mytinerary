@@ -2,12 +2,17 @@ import React from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+
+
 class CreateAccount extends React.Component {
-  state = {
+  constructor(props) {
+    super(props)
+  this.state = {
     email: "",
     password: "",
     pic: ""
   }
+}
 
   handleChange = (e) => {
     this.setState({
@@ -17,8 +22,24 @@ class CreateAccount extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state)
-  }
+
+  console.log("action post user ocurrio")
+  
+   var url = 'http://localhost:5000/api/users';
+   var data = this.state
+ 
+  fetch(url, {
+     method: 'POST',
+     body: JSON.stringify(data),
+     headers: {
+       'Content-Type': 'application/json'
+     }
+   }).then(res => res.json())
+     .catch(error => console.error('Error:', error))
+     .then(response => console.log('Success:', response));
+ 
+ }
+  
 
   render() {
     return (
@@ -66,4 +87,7 @@ class CreateAccount extends React.Component {
     )
   }
 }
+
+
+
 export default CreateAccount
