@@ -27,12 +27,15 @@
   },
   "homepage": "https://github.com/miguelangelparra/mytinerary#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
-    "mongoose": "^5.7.7"
+    "express-validator": "^6.3.0",
+    "mongoose": "^5.7.7",
+    "node-pre-gyp": "^0.14.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
