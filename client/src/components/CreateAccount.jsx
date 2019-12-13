@@ -30,7 +30,7 @@ class CreateAccount extends React.Component {
 
     console.log('action post user ocurrio');
 
-    var url = 'http://localhost:5000/api/users';
+    var url = 'http://localhost:5000/api/users/create';
     var data = this.state;
 
     fetch(url, {

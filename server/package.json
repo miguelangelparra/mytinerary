@@ -34,8 +34,11 @@
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
     "express-validator": "^6.3.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.7",
-    "node-pre-gyp": "^0.14.0"
+    "node-pre-gyp": "^0.14.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

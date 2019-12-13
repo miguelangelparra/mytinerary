@@ -6,6 +6,7 @@ const cities = require('./routes/api/cities')
 const itinerary = require('./routes/api/itinerary')
 const users = require('./routes/api/users')
 
+const passport= require('passport')
 
 const cors= require('cors')
 
@@ -47,6 +48,9 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log('Server started on port ' + port));
 
 
+// require("./passport").jwt; //passport configuration
+
+app.use(passport.initialize()); //passport middleware
 
 
 
