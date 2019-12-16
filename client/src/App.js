@@ -11,7 +11,7 @@ import NavbarCollapse from './components/NavbarCollapse'
 
 
 
-
+//Version 1 de diseño
 //import Home from './components/Home'
 // <Route exact path='/' component={Home} />
 
@@ -20,8 +20,9 @@ import NavbarCollapse from './components/NavbarCollapse'
 
 
 
-
+//Aplicacion Principal
 class App extends React.Component {
+
   render() {
     return (
       <div id="app" className="containeralign-items-center flex-column">
@@ -29,13 +30,11 @@ class App extends React.Component {
         <NavbarCollapse />
 
         <BrowserRouter>
-
           <Route exact path='/' component={Home2} />
           <Route path='/cities' component={Cities} />
           <Route path='/login' component={Login} />
           <Route path='/createAccount' component={CreateAccount} />
           <Route path='/itinerary/:city' component={Itinerary} />
-
         </BrowserRouter>
       </div>
     )

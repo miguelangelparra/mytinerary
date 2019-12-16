@@ -38,6 +38,7 @@
     "mongoose": "^5.7.7",
     "node-pre-gyp": "^0.14.0",
     "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {

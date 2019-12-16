@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-//Cities Model
+//Cities Model: Schema de las ciudades
 const Cities = require('../../models/CitiesSchema');
 
-// @route GET api/cities
-// @desc  Get all items
-// @access public
+//Ruta: Busca todas las ciudades en la BD de Mongo
 router.get('/', function (req, res) {
   Cities.find()
     .then(cities => res.json(cities))

@@ -5,3 +5,4 @@ export const GET_ITINERARY = "GET_ITINERARY";
 
 export const GET_USER = "GET_USER";
 export const POST_USER= "POST_USER";
+export const AUTH_USER= "AUTH_USER";
