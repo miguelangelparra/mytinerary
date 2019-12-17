@@ -4,6 +4,7 @@ const User = require('../../models/UserSchema'); //Schema de usuario
 const { check, validationResult } = require('express-validator'); //validator
 var bcrypt = require('bcryptjs'); //Encriptador
 const passport = require('passport') //Passport
+const passportGoogle=require("../../passportGoogle.js")
 
 
 const key = require("../../database/config/keys"); //clave jwt
@@ -107,5 +108,14 @@ router.post(
       .catch(err => res.status(404).json({ error: "User does not exist!" }));
   }
 );
+router.get('/auth/google',
+  passportGoogle.authenticate('google', { scope: ['profile'] }));
+
+router.get('/auth/google/callback', 
+  passportGoogle.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 
 module.exports = router;
